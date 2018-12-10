@@ -1,0 +1,65 @@
+{
+  "name": "egg-guardian",
+  "version": "1.0.0",
+  "description": "egg guardian core module, define Validator, Interrupter, Rule",
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "app",
+    "config",
+    "app.js"
+  ],
+  "eggPlugin": {
+    "name": "guardian"
+  },
+  "keywords": [
+    "egg",
+    "eggPlugin",
+    "egg-plugin",
+    "guardian",
+    "limit"
+  ],
+  "scripts": {
+    "autod": "autod",
+    "pkgfiles": "egg-bin pkgfiles --check",
+    "lint": "eslint .",
+    "cov": "egg-bin cov",
+    "test": "npm run lint && npm run test-local",
+    "test-local": "egg-bin test",
+    "ci": "npm run autod -- --check && npm run pkgfiles && npm run lint && npm run cov"
+  },
+  "devDependencies": {
+    "autod": "^3.0.1",
+    "egg": "^2.14.1",
+    "egg-bin": "^4.9.0",
+    "egg-ci": "^1.10.0",
+    "egg-mock": "^3.20.1",
+    "eslint": "^5.10.0",
+    "eslint-config-egg": "^7.1.0",
+    "mz-modules": "^2.1.0",
+    "sinon": "^7.2.0"
+  },
+  "dependencies": {
+    "debug": "^4.1.0",
+    "is-type-of": "^1.2.1",
+    "koa-compose": "^4.1.0",
+    "qps": "^1.1.1",
+    "sdk-base": "^3.5.1"
+  },
+  "author": "killagu <killa123@126.com>",
+  "ci": {
+    "version": "8, 10",
+    "type": "travis"
+  },
+  "bugs": {
+    "url": "https://github.com/eggjs/egg/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eggjs/egg-guardian.git"
+  },
+  "engines": {
+    "node": ">= 8.0.0"
+  },
+  "license": "MIT"
+}
